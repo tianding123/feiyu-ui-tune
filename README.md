@@ -30,13 +30,23 @@ DSH 的很多主题插件（玻璃拟态、视频皮肤、半透明背景）会�
 
 ## 安装
 
+### 方式一：直接从 GitHub 装（推荐）
+
 ```bash
-dsh plugin --profile desktop add file:/path/to/feiyu-ui-tune-0.1.1.tgz
+dsh plugin --profile desktop add github:tianding123/feiyu-ui-tune
 ```
 
-或者把 tgz 拖进 DSH 的插件管理页。
+### 方式二：下载 tgz 手动装
 
-装完**重启 DSH**，然后去「设置 → 通用」找那一行滑块。
+去 [Releases](https://github.com/tianding123/feiyu-ui-tune/releases) 下载 `feiyu-ui-tune-0.1.1.tgz`，然后：
+
+```bash
+dsh plugin --profile desktop add file:/你/下载到的/feiyu-ui-tune-0.1.1.tgz
+```
+
+也可以把 tgz 直接拖进 DSH 的插件管理页。
+
+**装完重启 DSH**，然后去「设置 → 通用」找那一行滑块。
 
 ## 设置存在哪
 
