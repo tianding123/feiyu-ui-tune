@@ -1,0 +1,15 @@
+# feiyu-ui-tune —— DSH bundle patch
+#
+# 在「设置 → 通用」里加一行「窗口背景不透明度」滑块。
+#
+# ⚠️ 本文件必须是**顶层 YAML 数组**，`name` 必须等于 package.json 的 name。
+#   2026-10-19 踩的坑：一开始漏了 `name`、把 `enabled` 写在顶层而不是 config 里，
+#   结果 cordis.yml 生成出 `disabled: true` —— 插件装了但从不加载，滑块永远不出现。
+#   照抄 feiyu-delivery-guard / feiyu-skills 的写法才对。
+#
+# 卸载 / 停用：把 config.enabled 改成 false，或整条删掉（记得重启 dsh）。
+- insert:
+    - id: feiyu-ui-tune
+      name: feiyu-ui-tune
+      config:
+        enabled: true
