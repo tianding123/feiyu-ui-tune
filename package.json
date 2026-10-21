@@ -1,0 +1,48 @@
+{
+  "name": "feiyu-ui-tune",
+  "version": "0.1.1",
+  "description": "在「设置 → 通用」加一行窗口背景不透明度滑块：调节界面各层背景的 alpha，解决插件设置页半透明看不清的问题。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "tianding123",
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tianding123/feiyu-ui-tune.git"
+  },
+  "homepage": "https://github.com/tianding123/feiyu-ui-tune#readme",
+  "bugs": {
+    "url": "https://github.com/tianding123/feiyu-ui-tune/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "opacity"
+  ]
+}
